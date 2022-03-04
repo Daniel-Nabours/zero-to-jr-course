@@ -1,13 +1,21 @@
-import type { NextPage } from 'next' 
+import type { NextPage, } from 'next'
+import Link from 'next/link'
 
-const Home: NextPage = () => {
+
+const HowWebsitesWork: NextPage = () => {
+
+
+
   return (
-    <div> 
-        <h1>
-          Introduction to Modern Web Development
-        </h1>  
+    <div>
+      <header>
+        Introduction to Modern Web Development
+      </header> 
+      <button>
+        <Link href="/HowWebsitesWork">&gt;</Link>
+      </button>
     </div>
   )
 }
 
-export default Home
+export default HowWebsitesWork
