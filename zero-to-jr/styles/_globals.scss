@@ -14,3 +14,41 @@ a {
 * {
   box-sizing: border-box;
 }
+
+header {
+  text-align: center;
+  font-size: 22pt;
+  font-weight: bold;
+}
+
+.triangle-right{ 
+  margin:1rem;
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid #555;
+	border-bottom: 25px solid transparent;
+}
+
+.triangle-left{
+  margin:1rem;
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 50px solid #555;
+	border-bottom: 25px solid transparent;
+}
+
+.nav-button-container{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom:0;
+  left:50%;
+  right:50%;
+}
+
+.page-container{
+  min-height: 100vh;
+  padding:1rem;
+}

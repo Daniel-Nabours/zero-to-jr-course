@@ -1,21 +1,28 @@
 import type { NextPage, } from 'next'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+import React from 'react'
 
+const Home: NextPage = () => {
 
-const HowWebsitesWork: NextPage = () => {
+  const router = useRouter()
 
-
+  const handleNext = () => {
+    router.push( '/intro/startingout/HowWebsitesWork' )
+  }
+  
 
   return (
-    <div>
+    <div className='page-container'>
       <header>
         Introduction to Modern Web Development
-      </header> 
-      <button>
-        <Link href="/HowWebsitesWork">&gt;</Link>
-      </button>
+      </header>
+
+      <footer className='nav-button-container'>
+        <div className='triangle-right' onClick={handleNext} />
+      </footer>
+
     </div>
   )
 }
 
-export default HowWebsitesWork
+export default Home
