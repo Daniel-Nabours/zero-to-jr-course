@@ -5,7 +5,7 @@ import React from "react";
 const Home: NextPage = () => { 
   return (
     <div>
-      <header>Using a Code Editor</header>
+      <header>Code Editors</header>
     </div>
   );
 };
