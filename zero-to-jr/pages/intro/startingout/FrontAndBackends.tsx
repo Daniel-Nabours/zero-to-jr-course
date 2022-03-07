@@ -1,34 +1,18 @@
-import type { NextPage, } from 'next' 
-import { useRouter } from 'next/router'
-import React from 'react'
+import type { NextPage } from "next";
+import { useRouter } from "next/router";
+import React from "react";
 
 const Home: NextPage = () => {
+  return (
+    <div>
+      <header>Frontends and Backends</header>
 
-    const router = useRouter()
+      <p>
+        Web developer roles are usually divided into 3 main categories:
+        Frontend. Backend, and Full stack.
+      </p>
+    </div>
+  );
+};
 
-    const handleBack = () => {
-        router.back()
-    }
-
-    const handleNext = () => {
-        router.push('./UsingACodeEditor')
-    }
-
-    return (
-        <div>
-            <header>
-                Frontends and Backends
-            </header>
-
-
-
-            <footer className="nav-button-container"> 
-                <div className='triangle-left' onClick={handleBack}/>  
-                <div className='triangle-right' onClick={handleNext}/> 
-            </footer>
-
-        </div>
-    )
-}
-
-export default Home
+export default Home;

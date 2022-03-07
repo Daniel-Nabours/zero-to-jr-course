@@ -1,34 +1,14 @@
-import type { NextPage, } from 'next'
-import { useRouter } from 'next/router'
-import React from 'react'
+import type { NextPage } from "next"; 
+import React from "react";
 
 const Home: NextPage = () => {
 
-    const router = useRouter()
 
-    const handleBack = () => {
-        router.back()
-    }
+  return (
+    <div>
+      <header>Data Structures and Common Algorithms</header>
+    </div>
+  );
+};
 
-    const handleNext = () => {
-        router.push('../../Goodbye')
-    }
-
-    return (
-        <div>
-            <header>
-                Data Structures and Common Algorithms
-            </header>
-
-
-
-            <footer className="nav-button-container">
-                <div className='triangle-left' onClick={handleBack} />
-                <div className='triangle-right' onClick={handleNext} />
-            </footer>
-
-        </div>
-    )
-}
-
-export default Home
+export default Home;

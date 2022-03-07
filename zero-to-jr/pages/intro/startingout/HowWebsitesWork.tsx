@@ -1,35 +1,29 @@
-import type { NextPage, } from 'next' 
-import { useRouter } from 'next/router'
-import React from 'react'
+import type { NextPage } from "next";
+import { useRouter } from "next/router";
+import React from "react";
 
-const Home: NextPage = () => {
+const Home: NextPage = () => { 
+  return (
+    <div>
+      <header>How Websites Work</header>
 
+      <p>
+        All websites, at their most basic, are just a bunch of files stored on a
+        computer somewhere called a server. This server is connected to the
+        internet and you can then load that website through a browser like
+        firefox or chrome. Your browser is also called the client in this
+        situation
+      </p>
 
-    const router = useRouter()
+      <p>
+        Every time you’re on the internet, you (the client) are loading data
+        from the server as well as submitting data back to the server. This
+        constant back and forth communication between client and server is the
+        basis of the internet.
+      </p>
+ 
+    </div>
+  );
+};
 
-    const handleBack = () => {
-        router.back()
-    }
-
-    const handleNext = () => {
-        router.push("./FrontAndBackends")
-    }
-
-    return (
-        <div>
-            <header>
-                How Websites Work
-            </header>
-
-            
-
-            <footer className="nav-button-container">
-                <div className='triangle-left' onClick={handleBack} />
-                <div className='triangle-right' onClick={handleNext} />
-            </footer>
-
-        </div>
-    )
-}
-
-export default Home
+export default Home;

@@ -4,29 +4,11 @@ import React from 'react'
 
 const Home: NextPage = () => {
 
-    const router = useRouter()
-
-    const handleBack = () => {
-        router.back()
-    }
-
-    const handleNext = () => {
-        router.push('../uiux/Usability')
-    }
-
     return (
         <div>
             <header>
                 Packages
             </header>
-
-
-
-            <footer className="nav-button-container">
-                <div className='triangle-left' onClick={handleBack} />
-                <div className='triangle-right' onClick={handleNext} />
-            </footer>
-
         </div>
     )
 }
