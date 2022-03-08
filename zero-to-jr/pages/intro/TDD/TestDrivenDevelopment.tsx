@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
-import React, { useEffect } from "react";
-import Prism from "prismjs";
+import React from "react";
+import { usePrism } from "../../../util/usePrism";
 
 const Home: NextPage = () => {
   const test = `describe(“the sum method", ()=>{
 	it(“adds the given numbers together”, ()=>{
 	  let expected = 3;
-	  let actual;
- 	  actual = sum(1, 2);
+	  let actual = sum(1, 2);
 	  expect(actual).toBe(expected);
 	});
   });`;
@@ -22,17 +21,6 @@ const Home: NextPage = () => {
   const code3 = `function sum(a, b) {
     return a + b
  }`;
-  const highLightCode = (s: string) => {
-    return (
-      <pre>
-        <code className="language-javascript">{s}</code>
-      </pre>
-    );
-  };
-
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
   return (
     <div className="content">
       <header>Test-Driven Development (TDD)</header>
@@ -68,12 +56,12 @@ const Home: NextPage = () => {
           and restructured, ensuring it still passes the tests.
         </span>
       </p>
-      <p>
-        <span>Take a look at the following example:</span>{" "}
-        {highLightCode(code1)}
-      </p>
+      <div>
+        <p><span>Take a look at the following example:</span></p>
+        {usePrism(code1)}
+      </div>
       <span>The test looks like this:</span>
-      {highLightCode(test)}
+      {usePrism(test)}
       <p>
         <span>
           This code fails since"sum()" does not return a value. The{" "}
@@ -84,17 +72,19 @@ const Home: NextPage = () => {
         Now for the <span style={{ color: "green" }}>GREEN</span> phase, we
         modify the code to make the test pass:
       </span>
-      <p>{highLightCode(code2)}</p>
+      <div>{usePrism(code2)}</div>
       <span>
         When we run the test again, the test passes. The code looks really ugly
         and is using unnecessary extra memory space, so for the final step we{" "}
         <span style={{ color: "blue" }}>REFACTOR</span>:
       </span>
-      <p>{highLightCode(code3)}</p>
-      <span>
-        The tests still pass, so we move on to the next task. This is the basis
-        of TDD.
-      </span>
+      <div>{usePrism(code3)}</div>
+      <p>
+        <span>
+          The tests still pass, so we move on to the next task. This is the
+          basis of TDD.
+        </span>
+      </p>
     </div>
   );
 };
