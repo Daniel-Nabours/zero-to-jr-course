@@ -1,17 +1,18 @@
 import React from "react";
 import arrow from "./arrow.svg";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Footer: React.FC<{
   handleNext: React.MouseEventHandler;
-  handleBack: React.MouseEventHandler;
-  isFirst: Boolean;
-  isLast: Boolean;
+  handleBack: React.MouseEventHandler; 
 }> = ({ ...props }): JSX.Element => {
+
+  const router = useRouter()
   return (
     <>
       <footer className="nav-button-container">
-        {!props.isFirst && (
+        {router.route!== "/" && (
           <div className="triangle-left">
             <Image
               alt="left arrow button"
@@ -20,7 +21,7 @@ const Footer: React.FC<{
             />
           </div>
         )}
-        {!props.isLast && (
+        {router.route!=="/Goodbye" && (
           <div className="triangle-right">
             <Image
               alt="right arrow button"

@@ -1,4 +1,5 @@
 import "../styles/styles.scss";
+import "../styles/prism.css"
 import type { AppProps } from "next/app";
 import {
   AnimatePresence,
@@ -17,17 +18,17 @@ const slideRight = {
     initial: {
       opacity: 0,
       left: "-100%",
-      scale: 0.4, 
+      scale: 0.4,
     },
     animate: {
       opacity: 1,
       left: 0,
-      scale: 1, 
+      scale: 1,
     },
     exit: {
       opacity: 0,
       left: "100%",
-      scale: 0.4, 
+      scale: 0.4,
     },
   },
   transition: {
@@ -41,17 +42,17 @@ const slideLeft = {
     initial: {
       opacity: 0,
       left: "100%",
-      scale: 0.4, 
+      scale: 0.4,
     },
     animate: {
       opacity: 1,
       left: 0,
-      scale: 1, 
+      scale: 1,
     },
     exit: {
       opacity: 0,
       left: "-100%",
-      scale: 0.4, 
+      scale: 0.4,
     },
   },
   transition: {
@@ -59,10 +60,8 @@ const slideLeft = {
   },
 };
 
-function MyApp({ Component, pageProps, router }: AppProps) {
-  const [index, setIndex] = useState(0);
+function MyApp({ Component, pageProps, router }: AppProps) { 
   const [dir, setDir] = useState(true);
- 
 
   const pageRoutes = [
     "/",
@@ -72,6 +71,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     "/intro/git/Repositories",
     "/intro/git/GitWorkflows",
     "/intro/git/Ifuckedup",
+    "/intro/TDD/TestDrivenDevelopment",
     "/intro/TDD/JourneyTesting",
     "/intro/TDD/UnitTesting",
     "/intro/TDD/UITesting",
@@ -105,25 +105,19 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   const pageRouter = useRouter();
 
   const handleBack = () => {
-    setDir(false);
-    setIndex((prev) => {
-      pageRouter.push({ pathname: pageRoutes[prev - 1] });
-      return prev - 1;
-    });
+    setDir(false); 
+    pageRouter.push({ pathname: pageRoutes[pageRoutes.indexOf(router.route) - 1] });
   };
 
   const handleNext = () => {
-    setDir(true);
-    setIndex((prev) => {
-      pageRouter.push({ pathname: pageRoutes[prev + 1] });
-      return prev + 1;
-    });
+    setDir(true); 
+    pageRouter.push({ pathname: pageRoutes[pageRoutes.indexOf(router.route) + 1] });
   };
 
   return (
     <div className="app-wrap">
       <div className="ui-wrap">
-        <Navigation {...{ setIndex, setDir, pages:pageRoutes }} />
+        <Navigation {...{ setDir, pages: pageRoutes }} />
       </div>
 
       <LazyMotion features={domAnimation}>
@@ -145,8 +139,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         {...{
           handleBack,
           handleNext,
-          isFirst: index < 1,
-          isLast: index === pageRoutes.length - 1,
         }}
       />
     </div>

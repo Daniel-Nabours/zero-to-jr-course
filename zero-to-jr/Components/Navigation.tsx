@@ -1,13 +1,11 @@
-import { useRouter } from "next/dist/client/router"; 
-import React, { useEffect, useState } from "react"; 
+import { useRouter } from "next/dist/client/router";
+import React, { useEffect, useState } from "react";
 export default function Navigation({
-  setIndex,
   setDir,
   pages,
 }: {
-  setIndex: React.Dispatch<React.SetStateAction<number>>;
-    setDir: React.Dispatch<React.SetStateAction<boolean>>;
-  pages:string[]
+  setDir: React.Dispatch<React.SetStateAction<boolean>>;
+  pages: string[];
 }) {
   const router = useRouter();
   const navs = pages.map((s, i) => ({ page: s, index: i }));
@@ -27,8 +25,7 @@ export default function Navigation({
               key={page.page}
               onClick={() => {
                 setDir(page.index > current);
-                setIndex(page.index);
-                router.push(page.page)
+                router.push(page.page);
               }}
             >
               <a className={router.route === page.page ? "selected" : ""}>
