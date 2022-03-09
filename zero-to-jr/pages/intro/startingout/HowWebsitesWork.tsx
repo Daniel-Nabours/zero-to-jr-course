@@ -1,10 +1,9 @@
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
 import React from "react";
 
-const Home: NextPage = () => { 
+const Home: NextPage = () => {
   return (
-    <div>
+    <div className="content">
       <header>How Websites Work</header>
 
       <p>
@@ -21,7 +20,6 @@ const Home: NextPage = () => {
         constant back and forth communication between client and server is the
         basis of the internet.
       </p>
- 
     </div>
   );
 };

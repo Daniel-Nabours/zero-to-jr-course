@@ -1,11 +1,9 @@
-import type { NextPage } from "next"; 
+import type { NextPage } from "next";
 import React from "react";
 
 const Home: NextPage = () => {
-
-
   return (
-    <div>
+    <div className="content">
       <header>Data Structures and Common Algorithms</header>
     </div>
   );

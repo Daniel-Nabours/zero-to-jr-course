@@ -1,5 +1,5 @@
 import "../styles/styles.scss";
-import "../styles/prism.css"
+import "../styles/prism.css";
 import type { AppProps } from "next/app";
 import {
   AnimatePresence,
@@ -7,10 +7,10 @@ import {
   LazyMotion,
   motion,
 } from "framer-motion";
-import { useRouter } from "next/router";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import Footer from "../Components/Footer";
 import Navigation from "../Components/Navigation";
+import { useRouter } from "next/router";
 
 const slideRight = {
   name: "Slide Right",
@@ -60,7 +60,7 @@ const slideLeft = {
   },
 };
 
-function MyApp({ Component, pageProps, router }: AppProps) { 
+function MyApp({ Component, pageProps, router }: AppProps) {
   const [dir, setDir] = useState(true);
 
   const pageRoutes = [
@@ -105,13 +105,17 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   const pageRouter = useRouter();
 
   const handleBack = () => {
-    setDir(false); 
-    pageRouter.push({ pathname: pageRoutes[pageRoutes.indexOf(router.route) - 1] });
+    setDir(false);
+    pageRouter.push({
+      pathname: pageRoutes[pageRoutes.indexOf(router.route) - 1],
+    });
   };
 
   const handleNext = () => {
-    setDir(true); 
-    pageRouter.push({ pathname: pageRoutes[pageRoutes.indexOf(router.route) + 1] });
+    setDir(true);
+    pageRouter.push({
+      pathname: pageRoutes[pageRoutes.indexOf(router.route) + 1],
+    });
   };
 
   return (

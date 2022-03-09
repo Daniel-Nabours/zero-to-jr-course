@@ -1,12 +1,11 @@
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
 import React from "react";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="content">
       <header>Code Editors</header>
-      <p> 
+      <p>
         When you build a website, the most essential tool that you'll use is
         your code editor or IDE (Integrated Development Environment). This tool
         allows you to write the markup and code that will make up the website.
@@ -26,9 +25,9 @@ const Home: NextPage = () => {
       <p>
         Once the download is finished, let’s create a working folder and go
         ahead and open it in Visual Studio Code. If you are on a Mac or Linux
-        machine, you can do this by typing <code>code .</code> in the directory you wish to
-        open, otherwise go to the file menu and click <b>open</b> folder to navigate
-        to the folder you wish to open.
+        machine, you can do this by typing <code>code .</code> in the directory
+        you wish to open, otherwise go to the file menu and click <b>open</b>{" "}
+        folder to navigate to the folder you wish to open.
       </p>
 
       <p>

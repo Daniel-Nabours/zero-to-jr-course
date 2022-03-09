@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
 import React from "react";
 
 const Home: NextPage = () => {
@@ -17,9 +16,10 @@ const Home: NextPage = () => {
         using, this can be quite simple to fix.
       </p>
       <p>
-        The most common ways to correct mistakes in your commit history are using the commands
+        The most common ways to correct mistakes in your commit history are
+        using the commands
       </p>
- 
+
       <p>
         <code>git reset</code>
       </p>
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
           </tr>
           <tr>
             <td>
-              <code>git checkout</code>
+              <code style={{ whiteSpace: "nowrap" }}>git checkout</code>
             </td>
             <td>Commit-level</td>
             <td>Switch between branches or inspect old snapshots</td>

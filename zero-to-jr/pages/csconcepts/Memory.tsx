@@ -1,11 +1,9 @@
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
 import React from "react";
 
-const Home: NextPage = () => { 
-
+const Home: NextPage = () => {
   return (
-    <div>
+    <div className="content">
       <header>Computer Memory</header>
     </div>
   );
