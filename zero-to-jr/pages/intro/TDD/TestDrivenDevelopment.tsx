@@ -64,7 +64,7 @@ const Home: NextPage = () => {
       {usePrism(test)}
       <p>
         <span>
-          This code fails since"sum()" does not return a value. The{" "}
+          This code fails since &apos;sum()&apos; does not return a value. The{" "}
           <span style={{ color: "red" }}>RED</span> phase is complete.
         </span>
       </p>
