@@ -57,27 +57,36 @@ const Home: NextPage = () => {
         </span>
       </p>
       <div>
-        <p><span>Take a look at the following example:</span></p>
+        <p>
+          <span>Take a look at the following example:</span>
+        </p>
         {usePrism(code1)}
       </div>
-      <span>The test looks like this:</span>
-      {usePrism(test)}
+        <br/>
+      <div>
+        <span>The test looks like this:</span>
+        {usePrism(test)}
+      </div>
       <p>
         <span>
           This code fails since"sum()" does not return a value. The{" "}
           <span style={{ color: "red" }}>RED</span> phase is complete.
         </span>
       </p>
-      <span>
-        Now for the <span style={{ color: "green" }}>GREEN</span> phase, we
-        modify the code to make the test pass:
-      </span>
+      <p>
+        <span>
+          Now for the <span style={{ color: "green" }}>GREEN</span> phase, we
+          modify the code to make the test pass:
+        </span>
+      </p>
       <div>{usePrism(code2)}</div>
-      <span>
-        When we run the test again, the test passes. The code looks really ugly
-        and is using unnecessary extra memory space, so for the final step we{" "}
-        <span style={{ color: "blue" }}>REFACTOR</span>:
-      </span>
+      <p>
+        <span>
+          When we run the test again, the test passes. The code looks really
+          ugly and is using unnecessary extra memory space, so for the final
+          step we <span style={{ color: "blue" }}>REFACTOR</span>:
+        </span>
+      </p>
       <div>{usePrism(code3)}</div>
       <p>
         <span>
