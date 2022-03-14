@@ -62,7 +62,7 @@ const Home: NextPage = () => {
         </p>
         {usePrism(code1)}
       </div>
-        <br/>
+      <br />
       <div>
         <span>The test looks like this:</span>
         {usePrism(test)}
@@ -98,4 +98,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default React.memo(Home);

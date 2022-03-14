@@ -34,4 +34,4 @@ const Footer: React.FC<{
   );
 };
 
-export default React.memo(Footer);
+export default React.memo(React.memo(Footer));

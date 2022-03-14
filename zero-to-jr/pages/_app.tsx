@@ -11,6 +11,7 @@ import { useState } from "react";
 import Footer from "../Components/Footer";
 import Navigation from "../Components/Navigation";
 import { useRouter } from "next/router";
+import React from "react";
 
 const slideRight = {
   name: "Slide Right",
@@ -149,4 +150,4 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   );
 }
 
-export default MyApp;
+export default React.memo(MyApp);

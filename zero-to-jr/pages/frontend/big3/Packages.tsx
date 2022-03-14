@@ -5,7 +5,7 @@ import React from 'react'
 const Home: NextPage = () => {
 
     return (
-        <div>
+        <div className="content">
             <header>
                 Packages
             </header>
