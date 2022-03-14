@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <p>
         SPAs are not search engine optimized since all of the information
         displayed is rendered at runtime, there’s nothing for the API to serve
-        to a search engine that’s scanning the page.
+        to a search engine that’s scanning the page. 
       </p>
 
       <p>
