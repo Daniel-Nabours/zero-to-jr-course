@@ -4,7 +4,11 @@ import React from "react";
 const Home: NextPage = () => {
   return (
     <div className="content">
-      <header>What is a Cluster?</header>
+      <div className="section">
+        <div className="section">
+          <header>What is a Cluster?</header>
+        </div>
+      </div>
     </div>
   );
 };

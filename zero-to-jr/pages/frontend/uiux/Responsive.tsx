@@ -4,7 +4,9 @@ import React from "react";
 const Home: NextPage = () => {
   return (
     <div className="content">
-      <header>Responsive Design</header>
+      <div className="section"> 
+          <header>Responsive Design</header>
+        </div> 
     </div>
   );
 };

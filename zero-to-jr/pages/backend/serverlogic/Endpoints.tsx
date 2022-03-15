@@ -4,7 +4,11 @@ import React from "react";
 const Home: NextPage = () => {
   return (
     <div className="content">
-      <header>Endpoints</header>
+      <div className="section">
+        <div className="section">
+          <header>Endpoints</header>
+        </div>
+      </div>
     </div>
   );
 };

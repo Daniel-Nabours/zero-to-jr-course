@@ -4,7 +4,11 @@ import React from "react";
 const Home: NextPage = () => {
   return (
     <div className="content">
-      <header>Big O Notation</header>
+      <div className="section">
+        <div className="section">
+          <header>Big O Notation</header>
+        </div>
+      </div>
     </div>
   );
 };

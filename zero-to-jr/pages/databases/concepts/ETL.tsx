@@ -4,7 +4,13 @@ import React from "react";
 const Home: NextPage = () => {
   return (
     <div className="content">
-      <header>Extract, Transform, and Load (Data &quot;pipelines&quot;)</header>
+      <div className="section">
+        <div className="section">
+          <header>
+            Extract, Transform, and Load (Data &quot;pipelines&quot;)
+          </header>
+        </div>
+      </div>
     </div>
   );
 };

@@ -119,27 +119,44 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     });
   };
 
+  let touchendX = 0, touchstartX = 0
+  function handleGesture() {
+    if (touchendX < touchstartX) handleNext()
+    if (touchendX > touchstartX) handleBack()
+  }
+  
+  const handleTouchStart = (e:React.TouchEvent<HTMLDivElement>) => {
+    touchstartX = e.changedTouches[0].screenX
+  }
+  
+  const handleTouchEnd = (e:React.TouchEvent<HTMLDivElement>) => {
+    touchendX = e.changedTouches[0].screenX
+    handleGesture()
+  }
+
   return (
-    <div className="app-wrap">
+    <div className="app-wrap" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
       <div className="ui-wrap">
         <Navigation {...{ setDir, pages: pageRoutes }} />
       </div>
 
-      <LazyMotion features={domAnimation}>
-        <AnimatePresence exitBeforeEnter={false}>
-          <motion.div
-            className="page-wrap"
-            key={router.route}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={dir ? slideLeft.transition : slideRight.transition}
-            variants={dir ? slideLeft.variants : slideRight.variants}
-          >
-            <Component {...pageProps} />
-          </motion.div>
-        </AnimatePresence>
-      </LazyMotion>
+  
+        <LazyMotion features={domAnimation}>
+          <AnimatePresence exitBeforeEnter={false}>
+            <motion.div
+              className="page-wrap"
+              key={router.route}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={dir ? slideLeft.transition : slideRight.transition}
+              variants={dir ? slideLeft.variants : slideRight.variants}
+            >
+              <Component {...pageProps} />
+            </motion.div>
+          </AnimatePresence>
+        </LazyMotion>
+      
       <Footer
         {...{
           handleBack,
