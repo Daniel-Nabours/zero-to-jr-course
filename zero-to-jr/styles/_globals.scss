@@ -17,7 +17,7 @@ body {
 header {
   text-align: center;
   font-size: 22pt;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 code {
@@ -56,7 +56,7 @@ span {
 
 .page-wrap {
   display: flex;
-  position: absolute; 
+  position: absolute;
   height: 100vh;
   width: 100%;
   justify-content: center;
@@ -66,23 +66,21 @@ span {
 }
 
 .content {
-  overflow-y: auto;   
+  overflow-y: auto;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   display: block;
+  text-align: center;
   max-height: 80vh;
-  .section{
-
-  width: 600px;
-  @media only screen and (max-width:600px) {
-    width: 100%;
-    padding: 10px;
+  .section {
+    width: 600px;
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+      padding: 10px;
+    }
   }
 }
-}
-
-
 
 .ui-wrap {
   // position: absolute;
@@ -94,21 +92,21 @@ span {
 }
 
 .navigation {
-  font-size: 2rem; 
+  font-size: 2rem;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  display:flex;
-  
-  .navcontent{
-    display:flex;
+  display: flex;
+
+  .navcontent {
+    display: flex;
     overflow: hidden;
     justify-content: center;
     flex-grow: 8;
   }
-  .navpadding{
-    display:flex;
-    width:10vw;
+  .navpadding {
+    display: flex;
+    width: 10vw;
     justify-content: center;
     flex-grow: 1;
   }
@@ -118,7 +116,7 @@ span {
     margin: 0 14px;
     padding: 8px;
     border-radius: 8px;
-  } 
+  }
   a:hover {
     transform: scale(1.1);
   }
@@ -135,19 +133,18 @@ a {
 
 * {
   box-sizing: border-box;
-  
 }
-::-webkit-scrollbar-corner { 
-    display:none;
-  }
-  ::-webkit-scrollbar {
-    background: transparent;
-    width:7px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: rgba($color: #FFF, $alpha: 0.2);
-    border-radius: 1rem;
-  }
+::-webkit-scrollbar-corner {
+  display: none;
+}
+::-webkit-scrollbar {
+  background: transparent;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba($color: #fff, $alpha: 0.2);
+  border-radius: 1rem;
+}
 
 .triangle-right {
   margin-bottom: 1rem;

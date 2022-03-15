@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         </p>
 
         <p>
-          Open your terminal in VSCode and type <code>git clone ((URL))</code>{" "}
+          Open your terminal in VSCode and type <br/><br/><code>git clone ((URL))</code>{" "}
         </p>
 
         <p>
@@ -34,9 +34,8 @@ const Home: NextPage = () => {
 
         <p>
           If you don’t have a repo to clone, you can create your own by using
-          the
-          <code>git init</code> command, now you’ll be able to connect to the
-          remote repository by using <code>git remote add origin ((URL))</code>.
+          the <br/><br/><code>git init</code><br/><br/>command, now you’ll be able to connect to the
+          remote repository by using <br/><br/><code>git remote add origin ((URL))</code><br/><br/>
           This will push your local folder to the repository located at the
           specified url.
         </p>
