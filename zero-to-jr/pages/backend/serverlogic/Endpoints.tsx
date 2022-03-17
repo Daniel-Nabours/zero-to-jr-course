@@ -4,10 +4,8 @@ import React from "react";
 const Home: NextPage = () => {
   return (
     <div className="content">
-      <div className="section">
-        <div className="section">
-          <header>Endpoints</header>
-        </div>
+      <div className="section"> 
+          <header>Endpoints</header> 
       </div>
     </div>
   );

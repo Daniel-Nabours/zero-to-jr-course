@@ -15,7 +15,7 @@ export default function Navigation({
 
   useEffect(() => {
     setNumItems(
-      Math.round(listRef.current!.getBoundingClientRect().width / 82)
+      Math.round(listRef.current!.getBoundingClientRect().width / 82) //magic number is the width in pixels of the page button
     );
   }, [listRef.current]);
 

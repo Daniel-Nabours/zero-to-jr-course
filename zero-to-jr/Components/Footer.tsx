@@ -1,5 +1,5 @@
 import React from "react";
-import arrow from "./arrow.svg";
+import arrow from "../res/navbutton.svg";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
@@ -34,4 +34,4 @@ const Footer: React.FC<{
   );
 };
 
-export default React.memo(React.memo(Footer));
+export default React.memo(Footer)

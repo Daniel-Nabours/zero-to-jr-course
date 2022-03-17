@@ -1,5 +1,9 @@
 import type { NextPage } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import vsc from "../../../res/vsc.png";
+import icons from "../../../res/icons.png";
 
 const Home: NextPage = () => {
   return (
@@ -16,28 +20,43 @@ const Home: NextPage = () => {
         <p>
           Which IDE you should use is up to your personal preference, but for
           our purposes we will be using the most popular by far: Visual Studio
-          Code (VSC) ((VISUAL AID))
+          Code (VSC)
         </p>
+        <Image src={vsc} alt="the Visual Studio Code home screen" />
 
         <p>
-          To download Visual Studio code visit https://code.visualstudio.com/
+          To download Visual Studio code visit{" "}
+          <u style={{ cursor: "pointer" }}>
+            <Link href="https://code.visualstudio.com/">
+              https://code.visualstudio.com/
+            </Link>{" "}
+          </u>
           and click the download link.
         </p>
 
         <p>
           Once the download is finished, let’s create a working folder and go
           ahead and open it in Visual Studio Code. If you are on a Mac or Linux
-          machine, you can do this by typing <code>code .</code> in the
-          directory you wish to open, otherwise go to the file menu and click{" "}
-          <b>open</b> folder to navigate to the folder you wish to open.
+          machine, you can do this by typing
+        </p>
+        <p>
+          <code>code .</code>
+        </p>
+        <p>
+          in the directory you wish to open, otherwise go to the file menu and
+          click
+          <i>
+            <b> open folder... </b>
+          </i>
+          to navigate to the folder you wish to open.
         </p>
 
         <p>
-          On the left side of the screen you’ll see the following icons: ((SHOW
-          IMAGE))
+          On the left side of the screen you’ll see the following icons:  
         </p>
+        <Image src={icons} alt="the Visual Studio Code home screen" />
 
-        <p>in order they are file explorer, search, debug, and extensions. </p>
+        <p>in order they are file explorer, search, source control, debug, and extensions. </p>
 
         <p>
           The file explorer and search functions allow you to traverse the
