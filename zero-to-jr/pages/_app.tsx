@@ -7,11 +7,11 @@ import {
   LazyMotion,
   motion,
 } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../Components/Footer";
 import Navigation from "../Components/Navigation";
 import { useRouter } from "next/router";
-import {TouchEvent, memo} from "react";
+import { KeyboardEvent, TouchEvent, memo } from "react";
 
 const slideRight = {
   name: "Slide Right",
@@ -119,44 +119,58 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     });
   };
 
-  let touchendX = 0, touchstartX = 0
+  let touchendX = 0,
+    touchstartX = 0;
   function handleGesture() {
-    if (touchendX < touchstartX) handleNext()
-    if (touchendX > touchstartX) handleBack()
-  }
-  
-  const handleTouchStart = (e:TouchEvent<HTMLDivElement>) => {
-    touchstartX = e.changedTouches[0].screenX
-  }
-  
-  const handleTouchEnd = (e:TouchEvent<HTMLDivElement>) => {
-    touchendX = e.changedTouches[0].screenX
-    handleGesture()
+    if (touchendX < touchstartX) handleNext();
+    if (touchendX > touchstartX) handleBack();
   }
 
+  const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
+    touchstartX = e.changedTouches[0].screenX;
+  };
+
+  const handleTouchEnd = (e: TouchEvent<HTMLDivElement>) => {
+    touchendX = e.changedTouches[0].screenX;
+    handleGesture();
+  };
+
+  useEffect(() => {
+    document.onkeyup = (e) => {
+      if (e.key === "ArrowLeft") handleBack();
+      if (e.key === "ArrowRight") handleNext();
+    };
+    return () => {
+      document.onkeyup = null
+    }
+  }, []);
+
   return (
-    <div className="app-wrap" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
+    <div
+      className="app-wrap"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="ui-wrap">
         <Navigation {...{ setDir, pages: pageRoutes }} />
       </div>
 
-  
-        <LazyMotion features={domAnimation}>
-          <AnimatePresence exitBeforeEnter={false}>
-            <motion.div
-              className="page-wrap"
-              key={router.route}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={dir ? slideLeft.transition : slideRight.transition}
-              variants={dir ? slideLeft.variants : slideRight.variants}
-            >
-              <Component {...pageProps} />
-            </motion.div>
-          </AnimatePresence>
-        </LazyMotion>
-      
+      <LazyMotion features={domAnimation}>
+        <AnimatePresence exitBeforeEnter={false}>
+          <motion.div
+            className="page-wrap"
+            key={router.route}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={dir ? slideLeft.transition : slideRight.transition}
+            variants={dir ? slideLeft.variants : slideRight.variants}
+          >
+            <Component {...pageProps} />
+          </motion.div>
+        </AnimatePresence>
+      </LazyMotion>
+
       <Footer
         {...{
           handleBack,

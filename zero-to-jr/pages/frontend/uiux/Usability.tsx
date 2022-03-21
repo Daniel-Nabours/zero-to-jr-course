@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import React, { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState, memo } from "react";
 
 const Home: NextPage = () => {
   const [messages, setmessages] = useState<string[]>([]);

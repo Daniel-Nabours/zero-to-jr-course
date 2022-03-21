@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import { memo } from "react";
-import api from "../../../res/api.svg";
+import api from "../../../res/api.svg"; 
 
 const Home: NextPage = () => {
   return (

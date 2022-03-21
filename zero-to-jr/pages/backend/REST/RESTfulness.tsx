@@ -4,10 +4,8 @@ import { memo } from "react";
 const Home: NextPage = () => {
   return (
     <div className="content">
-      <div className="section">
-        <div className="section">
-          <header>REpresentational State Transfer (REST)</header>
-        </div>
+      <div className="section"> 
+          <header>REpresentational State Transfer (REST)</header> 
       </div>
     </div>
   );
