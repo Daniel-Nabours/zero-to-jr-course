@@ -143,6 +143,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     return () => {
       document.onkeyup = null
     }
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

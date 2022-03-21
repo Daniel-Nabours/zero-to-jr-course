@@ -11,12 +11,11 @@ const Home: NextPage = () => {
       <div className="section">
         <header>Git Workflows</header>
 
-        <p>
-          {" "}
-          A git workflow is simply a series of commands you use frequently in
+        <p> 
+          {`A git workflow is simply a series of commands you use frequently in
           your day to day to accomplish certain tasks. It’s very rare that you
           stray from these series of commands, and when you do it’s usually
-          because you messed up.
+          because you messed up.`}
         </p>
 
         <span>
@@ -28,7 +27,7 @@ const Home: NextPage = () => {
             adds all of your changes to the staging area except the paths
             specified in the .gitignore file
           </p>
-          <code>git commit -m "Lorem Ipsum Dolor Sit Amet"</code>
+          <code>{`git commit -m "Lorem Ipsum Dolor Sit Amet"`}</code>
           <p>
             packages them all together and assigns a hash to the bundled changes
           </p>
@@ -40,9 +39,9 @@ const Home: NextPage = () => {
         </span>
 
         <p>
-          This all works fine if there’s only one engineer working on the code
+          {`This all works fine if there’s only one engineer working on the code
           at any given time, but that is not a realistic scenario in a working
-          environment.
+          environment.`}
         </p>
 
         <p>
@@ -68,7 +67,7 @@ const Home: NextPage = () => {
 
         <p>Let’s start with the merge option. </p>
 
-        <code>“git merge feature main” </code>
+        <code>git merge feature main</code>
 
         <p>
           This creates a new “merge commit” in the “feature” branch that ties

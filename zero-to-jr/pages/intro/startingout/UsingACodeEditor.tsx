@@ -11,10 +11,10 @@ const Home: NextPage = () => {
       <div className="section">
         <header>Code Editors</header>
         <p>
-          When you build a website, the most essential tool that you'll use is
+         {` When you build a website, the most essential tool that you'll use is
           your code editor or IDE (Integrated Development Environment). This
           tool allows you to write the markup and code that will make up the
-          website.
+          website.`}
         </p>
 
         <p>
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
         </p>
 
         <p>
-          Once the download is finished, let’s create a working folder and go
+          Once the download is finished,{` let’s`} create a working folder and go
           ahead and open it in Visual Studio Code. If you are on a Mac or Linux
           machine, you can do this by typing
         </p>
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           to navigate to the folder you wish to open.
         </p>
 
-        <p>On the left side of the screen you’ll see the following icons:</p>
+        <p>On the left side of the screen {`you’ll`} see the following icons:</p>
         <Image src={icons} alt="the Visual Studio Code home screen" />
 
         <p>

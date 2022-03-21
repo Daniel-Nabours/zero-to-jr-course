@@ -76,32 +76,32 @@ nav a {
       <div className="content section">
         <header>Syntactically Awesome Style Sheets (SASS)</header>
         <p>
-          CSS on its own can be fun, but stylesheets are getting larger, more
+          {`CSS on its own can be fun, but stylesheets are getting larger, more
           complex, and harder to maintain. This is where a preprocessor like
           SASS can help. Sass has features that don't exist in CSS yet like
           nesting, mixins, inheritance, and other nifty goodies that help you
-          write robust, maintainable CSS.
+          write robust, maintainable CSS.`}
         </p>
         <p>
-          The philosophy behind SASS can be summarized by trying to fit generic
+         {` The philosophy behind SASS can be summarized by trying to fit generic
           syntax we all know (functions, inheritance, variables, modules, etc)
-          into your CSS in a way the feels like code.
+          into your CSS in a way the feels like code.`}
         </p>
         <p>
-          Oftentimes when making a coherent UI, you’ll use the same color values
+         {` Oftentimes when making a coherent UI, you’ll use the same color values
           over and over and over again throughout your CSS sheets. In normal
           programming, this is obviously where one would use a constant or
           variable. In CSS3, this isn’t supported. In SASS, you can declare
-          variables using the "$" identifier.
+          variables using the "$" identifier.`}
         </p>
         <div>{varex}</div>
         <p>
-          When writing HTML you've probably noticed that it has a clear nested
-          and visual hierarchy. CSS, on the other hand, doesn't.
+        {`When writing HTML you've probably noticed that it has a clear nested
+          and visual hierarchy. CSS, on the other hand, doesn't.`}
         </p>
         <p>
-          Sass will let you nest your CSS selectors in a way that follows the
-          same visual hierarchy of your HTML.
+          {`Sass will let you nest your CSS selectors in a way that follows the
+          same visual hierarchy of your HTML.`}
         </p>
       </div>
       <div style={flexRow}>
@@ -111,8 +111,8 @@ nav a {
       </div>
       <div className="content section">
         <p>
-          By doing this, we can more accurately reflect the structure and
-          hierarchy of the DOM inside our CSS.
+          {`By doing this, we can more accurately reflect the structure and
+          hierarchy of the DOM inside our CSS.`}
         </p>
         <p>
           Some things in CSS are a bit tedious to write, especially with CSS3
@@ -122,10 +122,10 @@ nav a {
         </p>
         <div>{mixins}</div>
         <p>
-          The mixin 'theme' has a parameter called '$theme' with a default value
+         {` The mixin 'theme' has a parameter called '$theme' with a default value
           of 'DarkGray'. If you call the theme with no arguments, it will return
           a dark gray theme. If you call it with a different color like dark
-          red,, it will return that color instead.
+          red,, it will return that color instead.`}
         </p>
         <div>{mixins2}</div>
         <p>
@@ -137,4 +137,4 @@ nav a {
   );
 };
 
-export default memo(Home);
+export default memo(Home);;

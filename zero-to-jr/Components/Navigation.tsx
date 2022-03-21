@@ -17,10 +17,12 @@ export default function Navigation({
     setNumItems(
       Math.round(listRef.current!.getBoundingClientRect().width / 82) //magic number is the width in pixels of the page button
     );
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [listRef.current]);
 
   useEffect(() => {
     setCurrent(navs.findIndex((x) => x.page === router.route));
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.route]);
   return (
     <div className="navigation">
