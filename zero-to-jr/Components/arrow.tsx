@@ -1,4 +1,4 @@
-import React from "react";
+import {memo} from "react";
 
 const arrow = { width: "200px", display: "flex" };
 
@@ -49,4 +49,4 @@ const Arrow: React.FC<{ dir: "left" | "right" | "up" | "down" }> = ({
   );
 };
 
-export default React.memo(Arrow);
+export default memo(Arrow);

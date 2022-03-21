@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import React from "react";
+import { memo } from "react";
 
 const Home: NextPage = () => {
   return (
@@ -13,4 +13,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default React.memo(Home);
+export default memo(Home);

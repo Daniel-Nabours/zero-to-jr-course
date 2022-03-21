@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import React from "react";
+import { memo } from "react";
 
 const Home: NextPage = () => {
   return (

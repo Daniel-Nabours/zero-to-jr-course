@@ -55,4 +55,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default React.memo(Home);
+export default memo(Home);

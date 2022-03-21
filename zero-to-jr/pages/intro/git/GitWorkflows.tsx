@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import React from "react";
+import { memo } from "react";
 import fork from "../../../res/fork.svg";
 import merge from "../../../res/merge.svg";
 import rebase from "../../../res/rebase.svg";
@@ -118,4 +118,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default React.memo(Home);
+export default memo(Home);

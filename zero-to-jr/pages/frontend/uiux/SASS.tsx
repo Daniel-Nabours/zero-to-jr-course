@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import React from "react";
+import { memo } from "react";
 import { usePrism } from "../../../util/usePrism";
 
 const Home: NextPage = () => {
@@ -137,4 +137,4 @@ nav a {
   );
 };
 
-export default React.memo(Home);
+export default memo(Home);

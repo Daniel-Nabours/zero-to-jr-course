@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { memo } from "react";
 import vsc from "../../../res/vsc.png";
 import icons from "../../../res/icons.png";
 
@@ -51,12 +51,13 @@ const Home: NextPage = () => {
           to navigate to the folder you wish to open.
         </p>
 
-        <p>
-          On the left side of the screen you’ll see the following icons:  
-        </p>
+        <p>On the left side of the screen you’ll see the following icons:</p>
         <Image src={icons} alt="the Visual Studio Code home screen" />
 
-        <p>in order they are file explorer, search, source control, debug, and extensions. </p>
+        <p>
+          in order they are file explorer, search, source control, debug, and
+          extensions.{" "}
+        </p>
 
         <p>
           The file explorer and search functions allow you to traverse the
@@ -80,4 +81,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default React.memo(Home);
+export default memo(Home);

@@ -11,7 +11,7 @@ import { useState } from "react";
 import Footer from "../Components/Footer";
 import Navigation from "../Components/Navigation";
 import { useRouter } from "next/router";
-import React from "react";
+import {TouchEvent, memo} from "react";
 
 const slideRight = {
   name: "Slide Right",
@@ -125,11 +125,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     if (touchendX > touchstartX) handleBack()
   }
   
-  const handleTouchStart = (e:React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchStart = (e:TouchEvent<HTMLDivElement>) => {
     touchstartX = e.changedTouches[0].screenX
   }
   
-  const handleTouchEnd = (e:React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchEnd = (e:TouchEvent<HTMLDivElement>) => {
     touchendX = e.changedTouches[0].screenX
     handleGesture()
   }
@@ -167,4 +167,4 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   );
 }
 
-export default React.memo(MyApp);
+export default memo(MyApp);

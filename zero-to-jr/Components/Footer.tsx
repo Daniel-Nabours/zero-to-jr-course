@@ -1,11 +1,11 @@
-import React from "react";
+import {FC, MouseEventHandler, memo} from "react";
 import arrow from "../res/navbutton.svg";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-const Footer: React.FC<{
-  handleNext: React.MouseEventHandler;
-  handleBack: React.MouseEventHandler;
+const Footer: FC<{
+  handleNext: MouseEventHandler;
+  handleBack: MouseEventHandler;
 }> = ({ ...props }): JSX.Element => {
   const router = useRouter();
   return (
@@ -34,4 +34,4 @@ const Footer: React.FC<{
   );
 };
 
-export default React.memo(Footer)
+export default memo(Footer)

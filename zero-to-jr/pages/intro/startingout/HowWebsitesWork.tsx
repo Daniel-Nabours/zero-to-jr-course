@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import React from "react";
+import { memo } from "react";
 import server from "../../../res/server.svg";
 import client from "../../../res/client.svg";
 import Arrow from "../../../Components/arrow";
@@ -26,13 +26,20 @@ const Home: NextPage = () => {
           basis of the internet.
         </p>
       </div>
-      <div style={{display:"flex"}}>
+      <div style={{ display: "flex" }}>
         <Image src={client} alt="A Laptop Computer" width={200} />
-        <div style={{display:'flex', flexDirection:"column", justifyContent:"center", margin:'0rem 2rem 4rem 2rem'}}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            margin: "0rem 2rem 4rem 2rem",
+          }}
+        >
           <p>1. Request</p>
           <Arrow dir="right" />
           <p>2. Response</p>
-          <Arrow dir="left" /> 
+          <Arrow dir="left" />
         </div>
         <Image src={server} alt="A server" />
       </div>
@@ -40,4 +47,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default React.memo(Home);
+export default memo(Home);
