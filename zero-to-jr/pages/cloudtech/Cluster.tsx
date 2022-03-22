@@ -7,16 +7,16 @@ const Home: NextPage = () => {
       <div className="section">
         <header>What is a Cluster?</header>
 
-        <p> 
+        <p>{` 
           Kubernetes is a beast. I could sit and explain more and more and more
           about this technology for months and barely scratch the surface.
           Instead, I'll point to one of my favorite resources for learning:
           Youtube Academy.
-        </p>
+        `}</p>
 
-        <p> 
+        <p>{` 
           Watch the following video from the ever incredible Fireship channel:
-        </p>
+        `}</p>
         <iframe
           width="560"
           height="315"
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           allowFullScreen
         />
 
-        <p>That's pretty much all you'll need to know about kubernetes for our purposes at the moment.</p>
+        <p>{`That's pretty much all you'll need to know about kubernetes for our purposes at the moment.`}</p>
       </div>
     </div>
   );

@@ -17,20 +17,20 @@ const Home: NextPage = () => {
     <div className="content">
       <div className="section">
         <header>Usability</header>
-        <p>
+        <p>{`
           Usability is the ease of use of your application. If you need to
           provide any training or guides to navigate your website, it may be
           time to reconsider the usability of its design.
-        </p>
+        `}</p>
 
-        <p>
+        <p>{`
           Usability is a primary concern of UI/UX development. This metric can
           be very subjective, so it’s important to develop a comprehensive
           understanding of the user’s persona in order to determine the
           usability of the application.
-        </p>
+        `}</p>
 
-        <p>Take a look at the following components:</p>
+        <p>{`Take a look at the following components:`}</p>
 
         <div>
           <input value={message} onChange={handleChange} type="text" />
@@ -42,14 +42,14 @@ const Home: NextPage = () => {
           </ul>
         </div>
 
-        <p>
+        <p>{`
           Instinctually, you know how to interact with them by inputting text
           into the text box and clicking on the button because of the way they
           look and react. I didn’t have to explain what to do because it’s
           obvious. With more complex components, keeping interaction methods
           obvious becomes increasingly more important and simultaneously,
           increasingly more difficult.
-        </p>
+        `}</p>
       </div>
     </div>
   );

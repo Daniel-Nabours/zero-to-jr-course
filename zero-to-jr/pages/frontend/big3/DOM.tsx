@@ -13,21 +13,20 @@ const Home: NextPage = () => {
       <div className="section">
         <header>Document Object Model</header>
 
-        <p>
+        <p>{`
           The name is pretty self-explanatory - it&apos;s a model used to
           represent a document as a hierarchical structure of objects. To
           explain in more detail:
-        </p>
+        `}</p>
 
-        <p>
+        <p>{`
           The document will usually be an XML or HTML document. These are text
           documents that use markup language to signify different elements:
-        </p>
+        `}</p>
 
         <div> {usePrism(code, "html")}</div>
 
-        <p>
-          {" "}
+        <p>{` 
           In DOM each element is represented as an object. The document itself
           is an object. Each object can have child objects (the p, h1 and img in
           the above example are children of the parent document; the span
@@ -35,15 +34,15 @@ const Home: NextPage = () => {
           attributes (src and alt are attributes of the img element object;
           &apos;This is text&apos; is the text attribute of the p element
           object).
-        </p>
+        `}</p>
 
-        <p>
+        <p>{`
           Because these markup languages allow for nested (child) elements, the
           whole thing can be represented as a tree structure, which is the
           model.
-        </p>
+        `}</p>
 
-        <p>
+        <p>{`
           Note that the document doesn&apos;t have to be a literal file, it can
           and often does only exist in memory. For HTML, the browser is
           responsible for parsing the HTML text and building the DOM model in
@@ -51,7 +50,7 @@ const Home: NextPage = () => {
           doesn&apos;t change the actual HTML file. For XML documents you
           usually use an XML parsing library with your programming language of
           choice, and navigate the DOM structure using code.
-        </p>
+        `}</p>
       </div>
     </div>
   );

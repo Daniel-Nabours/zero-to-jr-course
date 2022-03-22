@@ -100,4 +100,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default memo(Home);
+export default memo(Home);;

@@ -15,7 +15,7 @@ const Home: NextPage = () => {
     <div className="content">
       <div className="section">
         <header>Responsive Design</header>
-        <p>
+        <p>{`
           In the early days of web design, pages were built to target a
           particular screen size. If the user had a larger or smaller screen
           than the designer expected, results ranged from unwanted scrollbars to
@@ -26,24 +26,24 @@ const Home: NextPage = () => {
           resolutions, etc. It is an idea that changed the way we design for a
           multi-device web, and in this article, we&apos;ll help you understand the
           main techniques you need to know to master it.
-        </p>
-        <p>
+        `}</p>
+        <p>{`
           Responsive design describes the use of three techniques in
           combination: fluid grids, scalable images and text, and media queries.
-        </p>
-        <p>
+        `}</p>
+        <p>{`
           Media Queries allow us to run a series of tests (e.g. whether the
           user&apos;s screen is greater than a certain width, or a certain
           resolution) and apply CSS selectively to style the page appropriately
           for the user&apos;s needs. Take a look at the following media query:{" "}
-        </p>
+        `}</p>
         <div>{mediaq}</div>
-        <p>
+        <p>{`
           The .container css class will now change to reflect the desired
           results when the content is screen media (IE not being printed) and is
           a minimum width of 800 pixels. The conditions within these media
           queries are known as breakpoints.
-        </p>
+        `}</p>
       </div>
     </div>
   );
