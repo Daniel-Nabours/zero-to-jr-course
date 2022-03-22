@@ -3,11 +3,11 @@ import { memo } from "react";
 import { usePrism } from "../../../util/usePrism";
 
 const Home: NextPage = () => {
-  const model = usePrism(`type Person = {
-    age:number
-    name:string
-    occupation:string | null
-  }`);
+  const model = usePrism(`export type Person = {
+    age: number
+    name: string
+    occupation: string | null
+  }`, "js");
   return (
     <div className="content">
       <div className="section">
