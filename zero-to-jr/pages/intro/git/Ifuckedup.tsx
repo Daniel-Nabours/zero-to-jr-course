@@ -35,7 +35,9 @@ const Home: NextPage = () => {
         <table>
           <thead>
             <tr>
-              <th>Command</th> <th>Scope</th> <th>Common use cases</th>
+              <th>Command</th>
+              <th>Scope</th>
+              <th>Common use cases</th>
             </tr>
           </thead>
           <thead>
@@ -53,7 +55,8 @@ const Home: NextPage = () => {
               <td>
                 <code>git reset</code>
               </td>
-              <td>File-level</td> <td>Unstage a file</td>
+              <td>File-level</td>
+              <td>Unstage a file</td>
             </tr>
             <tr>
               <td>
@@ -73,13 +76,15 @@ const Home: NextPage = () => {
               <td>
                 <code>git revert</code>
               </td>
-              <td>Commit-level</td> <td>Undo commits in a public branch</td>
+              <td>Commit-level</td>
+              <td>Undo commits in a public branch</td>
             </tr>
             <tr>
               <td>
                 <code>git revert</code>
               </td>
-              <td>File-level</td> <td>(N/A)</td>
+              <td>File-level</td>
+              <td>(N/A)</td>
             </tr>
           </thead>
         </table>

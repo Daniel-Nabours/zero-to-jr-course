@@ -91,7 +91,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     "/backend/graphQL/SingularEndpoint",
     "/backend/graphQL/DirectAPIQuery",
     "/cloudtech/Docker",
-    "/cloudtech/Cluster", 
+    "/cloudtech/Cluster",
     "/databases/concepts/ETL",
     "/databases/types/SQLDB",
     "/databases/types/KeyValueDB",
@@ -116,6 +116,13 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     pageRouter.push({
       pathname: pageRoutes[pageRoutes.indexOf(router.route) + 1],
     });
+    router.prefetch(
+      pageRoutes[
+        pageRoutes.indexOf(router.route) + 2 <= pageRoutes.length - 1
+          ? pageRoutes.indexOf(router.route) + 2
+          : pageRoutes.length - 1
+      ]
+    );
   };
 
   let touchendX = 0,
@@ -140,8 +147,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       if (e.key === "ArrowRight") handleNext();
     };
     return () => {
-      document.onkeyup = null
-    }
+      document.onkeyup = null;
+    };
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

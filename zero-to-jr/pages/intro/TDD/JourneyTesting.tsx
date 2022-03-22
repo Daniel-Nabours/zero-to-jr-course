@@ -5,9 +5,7 @@ const Home: NextPage = () => {
   return (
     <div className="content">
       <div className="section">
-        <div className="section">
-          <header>Journey Testing</header>
-        </div>
+        <header>Journey Testing</header>
       </div>
     </div>
   );
