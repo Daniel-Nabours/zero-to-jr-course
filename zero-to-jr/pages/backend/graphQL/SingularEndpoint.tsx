@@ -49,33 +49,33 @@ const Home: NextPage = () => {
       <div className="section">
         <header>Singular Endpoint</header>
         <p>
-          Graphql is a query language for reading and mutating data in apis. As
+          {`Graphql is a query language for reading and mutating data in apis. As
           a back-end developer, graphql provides a type system where you can
           describe a schema for your data in turn this gives the client the
-          power to explore and request the exact data they need.
+          power to explore and request the exact data they need.`}
         </p>
         <p>
-          Traditionally web developers have consumed apis using REST, where data
+          {`Traditionally web developers have consumed apis using REST, where data
           entities live on a bunch of endpoints on a server. When a request is
           received the api responds with the full data payload of the entity
-          that the endpoint contains.
+          that the endpoint contains.`}
         </p>
         <Image alt="a list of rest endpoints" src={rest} />
         <p>
-          That sounds simple enough but there are two potential drawbacks here.
+          {`That sounds simple enough but there are two potential drawbacks here.
           We may need multiple entities at one time in which case each request
           is under fetching the actual data we want. In other cases we may only
           want a small subset of a data entity in which case we need to over
           fetch from the api and that of course is bad for the environment. Save
-          the trees.
+          the trees.`}
         </p>
         <p>
-          Instead of multiple endpoints, a graphql api has a single entry point.
+          {`Instead of multiple endpoints, a graphql api has a single entry point.
           Data is queried or fetched by describing it with a syntax that mirrors
           its return shape in json. The front-end developer describes the data
           they want while the back-end developer writes code to resolve the
           request and it all happens in a syntax that can work with any
-          programming language.
+          programming language.`}
         </p>
       </div>
       <div style={{ display: "flex" }}>
@@ -83,8 +83,8 @@ const Home: NextPage = () => {
           style={{
             margin: "1rem",
             display: "flex",
-            flexDirection: "column", 
-            width: "500px", 
+            flexDirection: "column",
+            width: "500px",
           }}
         >
           {"request"}
@@ -94,8 +94,8 @@ const Home: NextPage = () => {
           style={{
             margin: "1rem",
             display: "flex",
-            flexDirection: "column", 
-            width: "500px", 
+            flexDirection: "column",
+            width: "500px",
           }}
         >
           {"response"}
