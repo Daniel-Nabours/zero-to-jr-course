@@ -60,7 +60,7 @@ const Home: NextPage = () => {
       <div className="section">
         <header>SQL Database</header>
         <p>
-         {` An SQL Database is just a series of tables that have columns and rows.
+          {` An SQL Database is just a series of tables that have columns and rows.
           You've probably interacted with these in some form or another in your
           career. They look like something similar to this:`}
         </p>
@@ -89,20 +89,34 @@ const Home: NextPage = () => {
         </table>
 
         <p>
-         {` Some commonly used SQL database are Microsoft SQL Server, MySQL, and
+          {` Some commonly used SQL database are Microsoft SQL Server, MySQL, and
           PostgreSQL.`}
         </p>
       </div>
-      <div style={{display:'flex'}}>
-        <a href="https://www.microsoft.com/en-us/sql-server/sql-server-2022" style={{cursor:'pointer', padding:'10px'}}> 
-          <Image src={ms} alt="Microsoft SQL Server logo" {...img} />
+      <div style={{ display: "flex" }}>
+        <a
+          href="https://www.microsoft.com/en-us/sql-server/sql-server-2022"
+          style={{ cursor: "pointer", padding: "10px" }}
+        >
+          <Image
+            placeholder="blur"
+            src={ms}
+            alt="Microsoft SQL Server logo"
+            {...img}
+          />
         </a>
-        <a href="https://www.mysql.com/" style={{cursor:'pointer', padding:'10px'}}> 
-          <Image src={my} alt="MySQL logo" {...img} />
+        <a
+          href="https://www.mysql.com/"
+          style={{ cursor: "pointer", padding: "10px" }}
+        >
+          <Image placeholder="blur" src={my} alt="MySQL logo" {...img} />
         </a>
-        <a href="https://www.postgresql.org/" style={{cursor:'pointer', padding:'10px'}}> 
+        <a
+          href="https://www.postgresql.org/"
+          style={{ cursor: "pointer", padding: "10px" }}
+        >
           <Image src={post} alt="PostgreSQL logo" {...img} />
-        </a >
+        </a>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <div className="section">
         <header>Code Editors</header>
         <p>
-         {` When you build a website, the most essential tool that you'll use is
+          {` When you build a website, the most essential tool that you'll use is
           your code editor or IDE (Integrated Development Environment). This
           tool allows you to write the markup and code that will make up the
           website.`}
@@ -22,7 +22,11 @@ const Home: NextPage = () => {
           our purposes we will be using the most popular by far: Visual Studio
           Code (VSC)
         </p>
-        <Image src={vsc} alt="the Visual Studio Code home screen" />
+        <Image
+          placeholder="blur"
+          src={vsc}
+          alt="the Visual Studio Code home screen"
+        />
 
         <p>
           To download Visual Studio code visit{" "}
@@ -35,9 +39,9 @@ const Home: NextPage = () => {
         </p>
 
         <p>
-          Once the download is finished,{` let’s`} create a working folder and go
-          ahead and open it in Visual Studio Code. If you are on a Mac or Linux
-          machine, you can do this by typing
+          Once the download is finished,{` let’s`} create a working folder and
+          go ahead and open it in Visual Studio Code. If you are on a Mac or
+          Linux machine, you can do this by typing
         </p>
         <p>
           <code>code .</code>
@@ -51,8 +55,14 @@ const Home: NextPage = () => {
           to navigate to the folder you wish to open.
         </p>
 
-        <p>On the left side of the screen {`you’ll`} see the following icons:</p>
-        <Image src={icons} alt="the Visual Studio Code home screen" />
+        <p>
+          On the left side of the screen {`you’ll`} see the following icons:
+        </p>
+        <Image
+          placeholder="blur"
+          src={icons}
+          alt="the Visual Studio Code home screen"
+        />
 
         <p>
           in order they are file explorer, search, source control, debug, and

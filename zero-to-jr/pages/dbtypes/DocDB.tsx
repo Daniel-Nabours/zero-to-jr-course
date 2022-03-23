@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import { memo } from "react";
-import mongo from '../../res/mongodb.png'
+import mongo from "../../res/mongodb.png";
 
 const Home: NextPage = () => {
   return (
@@ -15,8 +15,15 @@ const Home: NextPage = () => {
           and columns. A document can be a PDF, a document, or an XML or JSON
           file.`}
         </p>
-        <Image src={mongo} alt="a MongoDB database in visual studio code" />
-        <p>Some commonly used document databases are MongoDB, Couchbase, and Google Cloud Firestore.</p>
+        <Image
+          placeholder="blur"
+          src={mongo}
+          alt="a MongoDB database in visual studio code"
+        />
+        <p>
+          Some commonly used document databases are MongoDB, Couchbase, and
+          Google Cloud Firestore.
+        </p>
       </div>
     </div>
   );

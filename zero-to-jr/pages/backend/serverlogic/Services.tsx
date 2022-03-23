@@ -23,6 +23,7 @@ const Home: NextPage = () => {
         `}</p>
 
         <Image
+          placeholder="blur"
           src={ws}
           alt="A websocket connection with bidirectional messaging"
           width={250}

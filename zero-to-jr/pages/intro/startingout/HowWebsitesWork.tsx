@@ -27,7 +27,11 @@ const Home: NextPage = () => {
         `}</p>
       </div>
       <div style={{ display: "flex" }}>
-        <Image src={client} alt="A Laptop Computer" width={200} />
+        <Image 
+          src={client}
+          alt="A Laptop Computer"
+          width={200}
+        />
         <div
           style={{
             display: "flex",
@@ -41,7 +45,7 @@ const Home: NextPage = () => {
           <p>{`2. Response`}</p>
           <Arrow dir="left" />
         </div>
-        <Image src={server} alt="A server" />
+        <Image  src={server} alt="A server" />
       </div>
     </div>
   );

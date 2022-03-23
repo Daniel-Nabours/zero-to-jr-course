@@ -9,16 +9,20 @@ const Home: NextPage = () => {
       <div className="section">
         <header>Key-Value Database</header>
         <p>
-         {` A key-value database (sometimes called a key-value store) uses a
+          {` A key-value database (sometimes called a key-value store) uses a
           simple key-value method to store data. These databases contain a
           simple string (the key) that is always unique and an arbitrary large
           data field (the value). They are easy to design and implement.`}
         </p>
 
-        <Image src={keyvalue} alt="an example of a key-value database" />
+        <Image
+          placeholder="blur"
+          src={keyvalue}
+          alt="an example of a key-value database"
+        />
 
         <p>
-         {` As the name suggests, this type of NoSQL database implements a hash
+          {` As the name suggests, this type of NoSQL database implements a hash
           table to store unique keys along with the pointers to the
           corresponding data values. The values can be of scalar data types such
           as integers or complex structures such as JSON, lists, BLOB, and so
@@ -30,7 +34,10 @@ const Home: NextPage = () => {
           searched upon. Only the key can be queried.`}
         </p>
 
-        <p>Some commonly used examples of Key-Value databases are Redis, ElasticCache, and DynamoDB</p>
+        <p>
+          Some commonly used examples of Key-Value databases are Redis,
+          ElasticCache, and DynamoDB
+        </p>
       </div>
     </div>
   );

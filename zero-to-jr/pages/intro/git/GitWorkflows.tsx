@@ -49,7 +49,10 @@ const Home: NextPage = () => {
           with new commits. This results in a forked history, which can be
           visualized like so:
         `}</p>
-        <Image src={fork} alt="a forked version history in git" />
+        <Image 
+          src={fork}
+          alt="a forked version history in git"
+        />
 
         <p>{`
           Here we see the master branch and the feature branch have diverged,
@@ -73,7 +76,7 @@ const Home: NextPage = () => {
           together the histories of both branches, giving you a branch structure
           that looks like this:
         `}</p>
-        <Image src={merge} alt="a merge commit in git" />
+        <Image  src={merge} alt="a merge commit in git" />
 
         <p>{`
           “Merging” is nice because it’s a non-destructive operation. The
@@ -104,7 +107,10 @@ const Home: NextPage = () => {
           The major benefit of rebasing is that you get a much cleaner,
           perfectly linear project history.
         `}</p>
-        <Image src={rebase} alt="a rebased commit history in git" />
+        <Image 
+          src={rebase}
+          alt="a rebased commit history in git"
+        />
 
         <p>{`
           This makes it much easier to track the history of your project by

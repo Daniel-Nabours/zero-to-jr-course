@@ -47,7 +47,7 @@ const Home: NextPage = () => {
   return (
     <div className="content" style={{ display: "flex" }}>
       <div className="section">
-        <header>Singular Endpoint</header>
+        <header>GraphQL</header>
         <p>
           {`Graphql is a query language for reading and mutating data in apis. As
           a back-end developer, graphql provides a type system where you can
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
           received the api responds with the full data payload of the entity
           that the endpoint contains.`}
         </p>
-        <Image alt="a list of rest endpoints" src={rest} />
+        <Image placeholder="blur" alt="a list of rest endpoints" src={rest} />
         <p>
           {`That sounds simple enough but there are two potential drawbacks here.
           We may need multiple entities at one time in which case each request
