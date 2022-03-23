@@ -8,10 +8,10 @@ const Home: NextPage = () => {
         <header>What is a Cluster?</header>
 
         <p> 
-          Kubernetes is a beast. I could sit and explain more and more and more
+          K{`ubernetes is a beast. I could sit and explain more and more and more
           about this technology for months and barely scratch the surface.
           Instead, I'll point to one of my favorite resources for learning:
-          Youtube Academy.
+          Youtube Academy.`}
         </p>
 
         <p> 
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           allowFullScreen
         />
 
-        <p>That's pretty much all you'll need to know about kubernetes for our purposes at the moment.</p>
+        <p>{`That's pretty much all you'll need to know about kubernetes for our purposes at the moment.`}</p>
       </div>
     </div>
   );

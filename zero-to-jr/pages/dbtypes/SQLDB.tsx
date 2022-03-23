@@ -60,9 +60,9 @@ const Home: NextPage = () => {
       <div className="section">
         <header>SQL Database</header>
         <p>
-          An SQL Database is just a series of tables that have columns and rows.
+         {` An SQL Database is just a series of tables that have columns and rows.
           You've probably interacted with these in some form or another in your
-          career. They look like something similar to this:
+          career. They look like something similar to this:`}
         </p>
 
         <table>
@@ -70,13 +70,13 @@ const Home: NextPage = () => {
             <tr>
               <th>userid</th>
               {Object.keys(names[0]).map((n) => (
-                <th>{n}</th>
+                <th key={n}>{n}</th>
               ))}
             </tr>
           </thead>
           <thead>
             {names.map((n, i) => (
-              <tr>
+              <tr key={`${n}${i}`}>
                 <td>{i + 1}</td>
                 <td>{n.fName}</td>
                 <td>{n.lName}</td>
@@ -89,8 +89,8 @@ const Home: NextPage = () => {
         </table>
 
         <p>
-          Some commonly used SQL database are Microsoft SQL Server, MySQL, and
-          PostgreSQL.{" "}
+         {` Some commonly used SQL database are Microsoft SQL Server, MySQL, and
+          PostgreSQL.`}
         </p>
       </div>
       <div style={{display:'flex'}}>
