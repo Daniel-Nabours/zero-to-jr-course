@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { ChangeEvent, useState, memo } from "react";
+import { ChangeEvent, useState, memo, KeyboardEvent } from "react";
 
 const Home: NextPage = () => {
   const [messages, setmessages] = useState<string[]>([]);
@@ -13,6 +13,10 @@ const Home: NextPage = () => {
     setmessages((prev) => [...prev, message]);
     setmessage("");
   };
+
+  const handlePropogate = (e:KeyboardEvent) => {
+    e.stopPropagation() 
+  }
   return (
     <div className="content">
       <div className="section">
@@ -33,7 +37,7 @@ const Home: NextPage = () => {
         <p>{`Take a look at the following components:`}</p>
 
         <div>
-          <input value={message} onChange={handleChange} type="text" />
+          <input value={message} onChange={handleChange} onKeyUp={handlePropogate} type="text" />
           <button onClick={handleClick}>Send</button>
           <ul>
             {messages.map((s) => (

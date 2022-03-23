@@ -17,7 +17,7 @@ const slideRight = {
   name: "Slide Right",
   variants: {
     initial: {
-      opacity: 0,
+      opacity: 0.3,
       left: "-100%",
       scale: 0.4,
     },
@@ -27,7 +27,7 @@ const slideRight = {
       scale: 1,
     },
     exit: {
-      opacity: 0,
+      opacity: 0.3,
       left: "100%",
       scale: 0.4,
     },
@@ -41,7 +41,7 @@ const slideLeft = {
   name: "Slide Left",
   variants: {
     initial: {
-      opacity: 0,
+      opacity: 0.3,
       left: "100%",
       scale: 0.4,
     },
@@ -51,7 +51,7 @@ const slideLeft = {
       scale: 1,
     },
     exit: {
-      opacity: 0,
+      opacity: 0.3,
       left: "-100%",
       scale: 0.4,
     },
@@ -92,10 +92,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     "/backend/graphQL/DirectAPIQuery",
     "/cloudtech/Docker",
     "/cloudtech/Cluster",
-    "/databases/concepts/ETL",
-    "/databases/types/SQLDB",
-    "/databases/types/KeyValueDB",
-    "/databases/types/DocDB",
+    "/dbtypes/SQLDB",
+    "/dbtypes/KeyValueDB",
+    "/dbtypes/DocDB",
     "/csconcepts/Memory",
     "/csconcepts/BigO",
     "/csconcepts/DSA",
@@ -143,6 +142,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   useEffect(() => {
     document.onkeyup = (e) => {
+      e.stopPropagation()
       if (e.key === "ArrowLeft") handleBack();
       if (e.key === "ArrowRight") handleNext();
     };
