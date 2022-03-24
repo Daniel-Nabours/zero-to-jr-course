@@ -20,28 +20,29 @@ header {
   font-weight: bold;
 }
 
-code{
+code {
   background-color: #000;
-  padding:0.5rem;
+  padding: 0.5rem;
 }
 
-table{
-  margin-top:30px;
+table {
+  margin-top: 30px;
   display: table;
-  text-indent: 0; 
+  text-indent: 0;
 }
 
-thead{ 
+thead {
   display: table-header-group;
   vertical-align: auto;
   border: 1px solid black;
 }
-tr, td{
-  padding:10px;
+tr,
+td {
+  padding: 10px;
   border: 1px solid black;
 }
 
-span{
+span {
   font-weight: bold;
 }
 
@@ -56,57 +57,74 @@ span{
 .page-wrap {
   display: flex;
   position: absolute;
-  margin-top: -1rem;
-  margin-left: -1rem;
   height: 100vh;
-  width: 101vw;
+  width: 100%;
   justify-content: center;
   align-items: center;
   background-color: #111111;
-  border-radius: 1rem; 
+  border-radius: 1rem;
 }
 
 .content {
   overflow-y: auto;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  height: 80vh;
-  width: 50vw; 
+  display: block;
+  text-align: center;
+  max-height: 80vh;
+  .section {
+    width: 600px;
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+      padding: 10px;
+    }
+  }
 }
 
 .ui-wrap {
-  position: absolute;
+  // position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   top: 14px;
   z-index: 1;
 }
+
 .navigation {
   font-size: 2rem;
-  display: flex;
   justify-content: space-between;
   align-items: center;
-}
+  width: 100vw;
+  display: flex;
 
-.navigation a {
-  display: inline-block;
-  color: #fff;
-  margin: 0 14px;
-  padding: 8px;
-  border-radius: 8px;
-}
-
-.navigation a:hover {
-  transform: scale(1.1);
-}
-
-a.selected {
-  background-color: #bbb;
-  color: #000;
+  .navcontent {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    flex-grow: 8;
+  }
+  .navpadding {
+    display: flex;
+    width: 10vw;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  a {
+    display: inline-block;
+    color: #fff;
+    margin: 0 14px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor:pointer;
+  }
+  a:hover {
+    transform: scale(1.1);
+  }
+  a.selected {
+    background-color: #bbb;
+    color: #000;
+  }
 }
 
 a {
@@ -116,6 +134,17 @@ a {
 
 * {
   box-sizing: border-box;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+::-webkit-scrollbar {
+  background: transparent;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba($color: #fff, $alpha: 0.2);
+  border-radius: 1rem;
 }
 
 .triangle-right {

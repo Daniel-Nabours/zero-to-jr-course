@@ -1,13 +1,16 @@
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
-import React from "react";
+import { memo } from "react";
 
-const Home: NextPage = () => { 
+const Home: NextPage = () => {
   return (
-    <div>
-      <header>Unit Testing</header>
+    <div className="content">
+      <div className="section">
+        <div className="section">
+          <header>Unit Testing</header>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default memo(Home);

@@ -7,7 +7,7 @@ const Home: NextPage = () => {
  
 
   return (
-    <div >
+    <div className='content'>
       <header >
         Introduction to Modern Web Development
       </header>  

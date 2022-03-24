@@ -6,7 +6,7 @@ const Home: NextPage = () => {
  
 
     return (
-        <div>
+        <div className='content'>
             <header>
                Goodbye
             </header>

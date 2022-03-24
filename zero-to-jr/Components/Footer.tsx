@@ -1,29 +1,28 @@
-import React from "react";
-import arrow from "./arrow.svg";
+import { FC, MouseEventHandler, memo } from "react";
+import arrow from "../res/navbutton.svg";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-const Footer: React.FC<{
-  handleNext: React.MouseEventHandler;
-  handleBack: React.MouseEventHandler; 
+const Footer: FC<{
+  handleNext: MouseEventHandler;
+  handleBack: MouseEventHandler;
 }> = ({ ...props }): JSX.Element => {
-
-  const router = useRouter()
+  const router = useRouter();
   return (
     <>
       <footer className="nav-button-container">
-        {router.route!== "/" && (
+        {router.route !== "/" && (
           <div className="triangle-left">
-            <Image
+            <Image 
               alt="left arrow button"
               src={arrow}
               onClick={props.handleBack}
             />
           </div>
         )}
-        {router.route!=="/Goodbye" && (
+        {router.route !== "/Goodbye" && (
           <div className="triangle-right">
-            <Image
+            <Image 
               alt="right arrow button"
               src={arrow}
               onClick={props.handleNext}
@@ -35,4 +34,4 @@ const Footer: React.FC<{
   );
 };
 
-export default React.memo(Footer);
+export default memo(Footer);
