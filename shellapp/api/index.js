@@ -1,8 +1,8 @@
 import express from "express";
-import {connect} from "mongoose";
+import mongoose from "mongoose";
 import { config } from "dotenv";
-import {helmet} from "helmet";
-import {morgan} from "morgan";
+import helmet from "helmet";
+import morgan from "morgan";
 import multer from "multer";
 
 const router = express.Router();
@@ -10,7 +10,7 @@ const app = express();
 
 config()
 
-connect(
+mongoose.connect(
   `${process.env.MONGO_URL}:${process.env.MONGO_DEFAULT_PORT}`,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => { console.log("Connected to MongoDB"); }

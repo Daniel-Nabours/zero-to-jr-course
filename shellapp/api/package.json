@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "shell app to be built alongside the 805 CTS innovation directorate training program",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "start": "nodemon index.js"
   },
