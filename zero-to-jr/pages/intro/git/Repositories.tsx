@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         <p>
           Open your terminal in VSCode and type <br />
           <br />
-          <code>git clone ((URL))</code>
+          <code>git clone https://github.com/Daniel-Nabours/shellapp.git</code>
         </p>
 
         <p>{`
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
           using`}
           <br />
           <br />
-          <code>{`git remote add origin ((URL)`})</code>
+          <code>{`git remote add origin (URL)`}</code>
           <br />
           <br />
           {`This will push your local folder to the repository located at the

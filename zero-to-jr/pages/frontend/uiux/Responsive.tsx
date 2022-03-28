@@ -24,7 +24,7 @@ const Home: NextPage = () => {
           (RWD) appeared, a set of practices that allows web pages to alter
           their layout and appearance to suit different screen widths,
           resolutions, etc. It is an idea that changed the way we design for a
-          multi-device web, and in this article, we&apos;ll help you understand the
+          multi-device web, and in this article, we'll help you understand the
           main techniques you need to know to master it.
         `}</p>
         <p>{`
@@ -33,9 +33,9 @@ const Home: NextPage = () => {
         `}</p>
         <p>{`
           Media Queries allow us to run a series of tests (e.g. whether the
-          user&apos;s screen is greater than a certain width, or a certain
+          user&'s screen is greater than a certain width, or a certain
           resolution) and apply CSS selectively to style the page appropriately
-          for the user&apos;s needs. Take a look at the following media query:{" "}
+          for the user&'s needs. Take a look at the following media query:{" "}
         `}</p>
         <div>{mediaq}</div>
         <p>{`

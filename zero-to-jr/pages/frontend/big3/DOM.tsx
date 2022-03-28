@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <header>Document Object Model</header>
 
         <p>{`
-          The name is pretty self-explanatory - it&apos;s a model used to
+          The name is pretty self-explanatory - it's a model used to
           represent a document as a hierarchical structure of objects. To
           explain in more detail:
         `}</p>
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           the above example are children of the parent document; the span
           element is a child of the second p element). An object can also have
           attributes (src and alt are attributes of the img element object;
-          &apos;This is text&apos; is the text attribute of the p element
+          'This is text'; is the text attribute of the p element
           object).
         `}</p>
 
@@ -43,11 +43,11 @@ const Home: NextPage = () => {
         `}</p>
 
         <p>{`
-          Note that the document doesn&apos;t have to be a literal file, it can
+          Note that the document doesn't have to be a literal file, it can
           and often does only exist in memory. For HTML, the browser is
           responsible for parsing the HTML text and building the DOM model in
           memory. The DOM can then be manipulated by eg. JavaScript but it
-          doesn&apos;t change the actual HTML file. For XML documents you
+          doesn't change the actual HTML file. For XML documents you
           usually use an XML parsing library with your programming language of
           choice, and navigate the DOM structure using code.
         `}</p>
