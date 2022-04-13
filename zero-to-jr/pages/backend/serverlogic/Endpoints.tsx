@@ -65,10 +65,13 @@ const Home: NextPage = () => {
       }
     }
     const handleClick = (e:FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
       login({
         email: email.current!.value,
-        password: password.current!.value
-      })
+        password: password.current!.value,
+      }).then((res) => {
+        setUser(res) 
+      }).catch(console.log);
     }`
   )
 
@@ -78,6 +81,7 @@ const Home: NextPage = () => {
       <Router>
         <Routes>
           <Route path="/" element={user ? <HomePage /> : <SignupPage />} />
+          <Route path="/home" element={user ? <HomePage /> : <SignupPage />} />
           <Route path="/login" element={user ? <HomePage /> : <LoginPage />} />
         </Routes>
       </Router>

@@ -50,12 +50,7 @@ const Home: NextPage = () => {
     ws.onmessage = handleNewPost; 
     //this will run when the component unmounts, disconnecting the socket
     return () => { ws.close(); };
-  }, []);
-  const dateSort = (arr: iPost[]) => {
-    return arr.sort((p1: iPost, p2: iPost) => { 
-      return new Date(p2.createdAt).valueOf() - new Date(p1.createdAt).valueOf();
-    });
-  }
+  }, []); 
   const handleNewPost = (e: Event) => {
     let event = e as MessageEvent;
     let data: { post: iPost; action: string } = JSON.parse(event.data);
