@@ -41,24 +41,19 @@ const Home: NextPage = () => {
           seating arrangement.
         `}</p>
       </div>
-
-      {/* @ts-ignore */}
-      <div className="circle" style={{ display: "flex" }}>
-        {/* @ts-ignore */}
+ 
+      <div className="circle" style={{ display: "flex" }}> 
         <div className="circle">
           <Image src={client} alt="A Laptop Computer" />
           <p>{`Frontend`}</p>
-        </div>
-        {/* @ts-ignore */}
+        </div> 
         <div className="flex-column">
-          {/* @ts-ignore */}
           <div className="flex-column">
             <p>{`1. Request`}</p>
             <Arrow dir="right" />
             <p>{`2. Response`}</p>
             <Arrow dir="left" />
           </div>
-          {/* @ts-ignore */}
           <div
             style={{
               height: "100%",
@@ -69,8 +64,7 @@ const Home: NextPage = () => {
           >
             <p>{`Full stack`}</p>
           </div>
-        </div>
-        {/* @ts-ignore */}
+        </div> 
         <div className="circle">
           <Image src={server} alt="A server" />
           <p>{`Backend`}</p>
