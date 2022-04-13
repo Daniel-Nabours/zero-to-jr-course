@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <Image placeholder="blur" src={array} alt="An array data structure" />
         <p>
           {`Each of these cells can store any amount of data you need, including other arrays. 
-        Arrays have a maximum depth of 60 dimensions, although you should never reach anywhere
+        Arrays have a maximum depth of 32 dimensions, although you should never reach anywhere
         near this limit in any sort of real-world scenario.`}
         </p>
         <h2>Tree</h2>

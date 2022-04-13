@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import { memo } from "react";
 import { usePrism } from "../../../util/usePrism";
+import UserModel from '../../../res/UserModel.png' 
+import Image from "next/image";
 
 const Home: NextPage = () => {
   const model = usePrism(`export type Person = {
@@ -40,6 +42,14 @@ const Home: NextPage = () => {
           Data modeling allows us to handle and work with data in a was that is more efficient
           and much simpler to conceptualize.
         `}</p>
+        <p>{`Let's model out a User for our application. Under /api, create a folder called "models"`}</p>
+        <code>{`mkdir models`}</code> 
+        <p>{`Next, we'll create a file called "User.js" inside the models folder.`}</p>
+        <code>{`touch models/User.js`}</code>
+        <p>{`Here's where we'll model out our user object. In general a user will have an email, a password, and a username. We can define this using mongoose like so:`}</p>
+
+        <Image src={UserModel} alt="A user consisting of username, email, and password modeled with Mongoose in Visual Studio" />
+        <p>Now whenever we retrieve a user from mongo, we'll have a stable structure to go off of.</p>
       </div>
     </div>
   );

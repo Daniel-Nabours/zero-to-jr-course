@@ -78,26 +78,12 @@ const Home: NextPage = () => {
           programming language.`}
         </p>
       </div>
-      <div style={{ display: "flex" }}>
-        <div
-          style={{
-            margin: "1rem",
-            display: "flex",
-            flexDirection: "column",
-            width: "500px",
-          }}
-        >
+      <div className="comparison">
+        <div className="comparison-block">
           {"request"}
           {req}
         </div>
-        <div
-          style={{
-            margin: "1rem",
-            display: "flex",
-            flexDirection: "column",
-            width: "500px",
-          }}
-        >
+        <div className="comparison-block">
           {"response"}
           {res}
         </div>

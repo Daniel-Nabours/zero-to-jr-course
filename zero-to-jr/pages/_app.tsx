@@ -72,10 +72,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     "/intro/git/Repositories",
     "/intro/git/GitWorkflows",
     "/intro/git/Ifuckedup",
-    "/intro/TDD/TestDrivenDevelopment",
-    "/intro/TDD/JourneyTesting",
-    "/intro/TDD/UnitTesting",
-    "/intro/TDD/UITesting",
+    "/intro/TDD/TestDrivenDevelopment", 
     "/frontend/big3/DOM",
     "/frontend/big3/Bundles",
     "/frontend/big3/Packages",
@@ -84,10 +81,10 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     "/frontend/uiux/Usability",
     "/frontend/uiux/SASS",
     "/frontend/uiux/Responsive",
-    "/backend/serverlogic/Endpoints",
-    "/backend/serverlogic/Models",
-    "/backend/serverlogic/Services",
     "/backend/REST/RESTfulness",
+    "/backend/serverlogic/Models",
+    "/backend/serverlogic/Endpoints",
+    "/backend/serverlogic/Services",
     "/backend/graphQL/SingularEndpoint",
     "/backend/graphQL/DirectAPIQuery",
     "/cloudtech/Docker",
@@ -124,11 +121,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     );
   };
 
-  let touchendX = 0,
-    touchstartX = 0;
-  function handleGesture() {
-    if (touchendX < touchstartX) handleNext();
-    if (touchendX > touchstartX) handleBack();
+  let touchendX = 0, touchstartX = 0;
+  function handleGesture() { 
+    let delta = touchendX - touchstartX 
+    if (touchendX < touchstartX && delta <= -150) handleNext();
+    if (touchendX > touchstartX && delta > 150) handleBack();
   }
 
   const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {

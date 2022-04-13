@@ -5,18 +5,8 @@ import server from "../../../res/server.svg";
 import client from "../../../res/client.svg";
 import Arrow from "../../../Components/arrow";
 
-const Home: NextPage = () => {
-  const circleDiv = {
-    borderRadius: "1000%",
-    border: "1px solid white",
-    padding: "4rem",
-  };
-
-  const flexColumn = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-  };
+const Home: NextPage = () => { 
+ 
 
   return (
     <div
@@ -53,16 +43,16 @@ const Home: NextPage = () => {
       </div>
 
       {/* @ts-ignore */}
-      <div style={{ ...circleDiv, display: "flex" }}>
+      <div className="circle" style={{ display: "flex" }}>
         {/* @ts-ignore */}
-        <div style={{ ...circleDiv }}>
+        <div className="circle">
           <Image src={client} alt="A Laptop Computer" />
           <p>{`Frontend`}</p>
         </div>
         {/* @ts-ignore */}
-        <div style={{ ...flexColumn }}>
+        <div className="flex-column">
           {/* @ts-ignore */}
-          <div style={{ ...flexColumn }}>
+          <div className="flex-column">
             <p>{`1. Request`}</p>
             <Arrow dir="right" />
             <p>{`2. Response`}</p>
@@ -71,7 +61,7 @@ const Home: NextPage = () => {
           {/* @ts-ignore */}
           <div
             style={{
-              height: 200,
+              height: "100%",
               display: "flex",
               justifyContent: "center",
               alignItems: "flex-end",
@@ -81,7 +71,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* @ts-ignore */}
-        <div style={{ ...circleDiv }}>
+        <div className="circle">
           <Image src={server} alt="A server" />
           <p>{`Backend`}</p>
         </div>

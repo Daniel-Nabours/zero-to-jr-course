@@ -1,6 +1,6 @@
 import {memo} from "react";
 
-const arrow = { width: "200px", display: "flex" };
+const arrow = { width: "100%", display: "flex" };
 
 const line = {
   marginTop: "14px",
