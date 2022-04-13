@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         <p>{`Here's where we'll model out our user object. In general a user will have an email, a password, and a username. We can define this using mongoose like so:`}</p>
 
         <Image src={UserModel} alt="A user consisting of username, email, and password modeled with Mongoose in Visual Studio" />
-        <p>Now whenever we retrieve a user from mongo, we'll have a stable structure to go off of.</p>
+        <p>{`Now whenever we retrieve a user from mongo, we'll have a stable structure to go off of.`}</p>
       </div>
     </div>
   );
