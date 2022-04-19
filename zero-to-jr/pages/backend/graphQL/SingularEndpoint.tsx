@@ -45,7 +45,7 @@ const Home: NextPage = () => {
     "js"
   );
   return (
-    <div className="content" style={{ display: "flex" }}>
+    <div className="content">
       <div className="section">
         <header>GraphQL</header>
         <p>
@@ -78,14 +78,16 @@ const Home: NextPage = () => {
           programming language.`}
         </p>
       </div>
-      <div className="comparison">
-        <div className="comparison-block">
-          {"request"}
-          {req}
-        </div>
-        <div className="comparison-block">
-          {"response"}
-          {res}
+      <div className="section"> 
+        <div className="comparison">
+          <div className="comparison-block">
+            {"request"}
+            {req}
+          </div>
+          <div className="comparison-block">
+            {"response"}
+            {res}
+          </div>
         </div>
       </div>
     </div>

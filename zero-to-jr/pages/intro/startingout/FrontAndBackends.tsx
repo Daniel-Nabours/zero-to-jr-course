@@ -5,14 +5,9 @@ import server from "../../../res/server.svg";
 import client from "../../../res/client.svg";
 import Arrow from "../../../Components/arrow";
 
-const Home: NextPage = () => { 
- 
-
+const Home: NextPage = () => {
   return (
-    <div
-      className="content"
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
+    <div className="content">
       <div className="section">
         <header>Frontends and Backends</header>
 
@@ -41,33 +36,35 @@ const Home: NextPage = () => {
           seating arrangement.
         `}</p>
       </div>
- 
-      <div className="circle" style={{ display: "flex" }}> 
-        <div className="circle">
-          <Image src={client} alt="A Laptop Computer" />
-          <p>{`Frontend`}</p>
-        </div> 
-        <div className="flex-column">
+
+      <div className="section"> 
+        <div className="circle" style={{ display: "flex" }}>
+          <div className="circle">
+            <Image src={client} alt="A Laptop Computer" />
+            <p>{`Frontend`}</p>
+          </div>
           <div className="flex-column">
-            <p>{`1. Request`}</p>
-            <Arrow dir="right" />
-            <p>{`2. Response`}</p>
-            <Arrow dir="left" />
+            <div className="flex-column">
+              <p>{`1. Request`}</p>
+              <Arrow dir="right" />
+              <p>{`2. Response`}</p>
+              <Arrow dir="left" />
+            </div>
+            <div
+              style={{
+                height: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "flex-end",
+              }}
+            >
+              <p>{`Full stack`}</p>
+            </div>
           </div>
-          <div
-            style={{
-              height: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "flex-end",
-            }}
-          >
-            <p>{`Full stack`}</p>
+          <div className="circle">
+            <Image src={server} alt="A server" />
+            <p>{`Backend`}</p>
           </div>
-        </div> 
-        <div className="circle">
-          <Image src={server} alt="A server" />
-          <p>{`Backend`}</p>
         </div>
       </div>
     </div>
